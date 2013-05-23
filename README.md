@@ -1,4 +1,4 @@
-Octonore
+Octonore [![Build Status](https://travis-ci.org/zachlatta/octonore.png?branch=master)](https://travis-ci.org/zachlatta/octonore)
 ========
 
 An octolicious wrapper around the [Gitignore templates API](http://developer.github.com/v3/gitignore/).
