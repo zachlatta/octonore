@@ -21,13 +21,14 @@ To get a hash of its name and source code, call its `data` method.
 
 ### Example Program
 
-    require 'octonore'
+```ruby
+require 'octonore'
 
-	templates = [ Octonore::Template.new('C'), Octonore::Template.new('Java') ]
+templates = [ Octonore::Template.new('C'), Octonore::Template.new('Java') ]
 
-	templates.each do |template|
-	  File.open("#{template.data["name"]}.gitignore", 'w') { |file|
-		file.write(template.data["source"])
-	  }
-	end
-	
+templates.each do |template|
+  File.open("#{template.data["name"]}.gitignore", 'w') { |file|
+    file.write(template.data["source"])
+  }
+end
+```
