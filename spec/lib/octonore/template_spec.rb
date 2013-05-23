@@ -40,14 +40,6 @@ describe Octonore::Template do
       template.should respond_to :data
     end
 
-    it "should have a headers method" do
-      template.should respond_to :headers
-    end
-
-    it "should return a user agent" do
-      template.headers["User-Agent"].should_not equal nil
-    end
-
     it "should parse the api response from JSON to Hash" do
       template.data.should be_instance_of Hash
     end
