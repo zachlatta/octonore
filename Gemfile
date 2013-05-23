@@ -7,4 +7,5 @@ group :test do
   gem 'webmock'
   gem 'vcr'
   gem 'rake'
+  gem 'coveralls', require: false
 end
