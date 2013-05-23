@@ -5,8 +5,16 @@ Gem::Specification.new do |s|
   s.summary     = "Wrapper around the Github gitignore template API."
   s.description = "An octolicious wrapper around the Github gitignore template
                    API."
-  s.authors     = ["Zach Latta"]
-  s.email       = 'zchlatta@gmail.com'
-  s.homepage    = 'http://rubygems.org/gems/octonore'
-  s.files       = ["lib/octonore.rb"]
+  s.license     = 'MIT'
+
+  s.authors  = ["Zach Latta"]
+  s.email    = 'zchlatta@gmail.com'
+  s.homepage = 'http://rubygems.org/gems/octonore'
+
+  s.files       = `git ls-files`.split("\n")
+  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables = `git ls-files -- bin/*`.split("\n").map { |f|
+                      File.basename(f)
+                    }
+  s.require_paths = ["lib"]
 end
