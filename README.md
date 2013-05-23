@@ -1,4 +1,4 @@
-Octonore [![Build Status](https://travis-ci.org/zachlatta/octonore.png?branch=master)](https://travis-ci.org/zachlatta/octonore) [![Code Climate](https://codeclimate.com/github/zachlatta/octonore.png)](https://codeclimate.com/github/zachlatta/octonore)
+Octonore [![Build Status](https://travis-ci.org/zachlatta/octonore.png?branch=master)](https://travis-ci.org/zachlatta/octonore) [![Code Climate](https://codeclimate.com/github/zachlatta/octonore.png)](https://codeclimate.com/github/zachlatta/octonore) [![Dependency Status](https://gemnasium.com/zachlatta/octonore.png)](https://gemnasium.com/zachlatta/octonore)
 ========
 
 An octolicious wrapper around the [Gitignore templates API](http://developer.github.com/v3/gitignore/).
