@@ -1,4 +1,4 @@
-Octonore [![Build Status](https://travis-ci.org/zachlatta/octonore.png?branch=master)](https://travis-ci.org/zachlatta/octonore) [![Code Climate](https://codeclimate.com/github/zachlatta/octonore.png)
+Octonore [![Build Status](https://travis-ci.org/zachlatta/octonore.png?branch=master)](https://travis-ci.org/zachlatta/octonore) [![Code Climate](https://codeclimate.com/github/zachlatta/octonore.png)](https://codeclimate.com/github/zachlatta/octonore)
 ========
 
 An octolicious wrapper around the [Gitignore templates API](http://developer.github.com/v3/gitignore/).
@@ -12,7 +12,7 @@ Usage
 To get a gitignore template you first need to instantiate it.
 
 	>> c_template = Octonore::Template.new('C')
-	=> #<Octonore::Template:0x007fe5f401a1d0 @name="C">
+    => #<Octonore::Template:0x007fe5f401a1d0 @name="C">
 
 To get a hash of its name and source code, call its `data` method.
 
