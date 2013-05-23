@@ -1,0 +1,28 @@
+/Users/zach/.rvm/rubies/ruby-2.0.0-p0/bin/ruby -S rspec ./spec/lib/octonore/template_spec.rb
+...F#<HTTParty::Response:0x7fb81a8288c0 parsed_response={"message"=>"Not Found"}, @response=#<Net::HTTPNotFound 404 Not Found readbody=true>, @headers={"server"=>["GitHub.com"], "date"=>["Thu, 23 May 2013 08:50:05 GMT"], "content-type"=>["application/json; charset=utf-8"], "connection"=>["keep-alive"], "status"=>["404 Not Found"], "x-ratelimit-limit"=>["60"], "x-ratelimit-remaining"=>["56"], "x-github-media-type"=>["github.beta; format=json"], "x-content-type-options"=>["nosniff"], "content-length"=>["23"], "access-control-allow-credentials"=>["true"], "access-control-expose-headers"=>["ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes"], "access-control-allow-origin"=>["*"]}>
+.#<HTTParty::Response:0x7fb818ea3a80 parsed_response={"message"=>"Not Found"}, @response=#<Net::HTTPNotFound 404 Not Found readbody=true>, @headers={"server"=>["GitHub.com"], "date"=>["Thu, 23 May 2013 08:50:05 GMT"], "content-type"=>["application/json; charset=utf-8"], "connection"=>["keep-alive"], "status"=>["404 Not Found"], "x-ratelimit-limit"=>["60"], "x-ratelimit-remaining"=>["56"], "x-github-media-type"=>["github.beta; format=json"], "x-content-type-options"=>["nosniff"], "content-length"=>["23"], "access-control-allow-credentials"=>["true"], "access-control-expose-headers"=>["ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes"], "access-control-allow-origin"=>["*"]}>
+F
+
+Failures:
+
+  1) Octonore::Template GET template must have a data method
+     Failure/Error: template.should respond_to :dat
+       expected #<Octonore::Template:0x007fb818e4bda8> to respond to :dat
+     # ./spec/lib/octonore/template_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  2) Octonore::Template GET template must perform the request and get the data
+     Failure/Error: template.data["name"].should eq('C')
+       
+       expected: "C"
+            got: nil
+       
+       (compared using ==)
+     # ./spec/lib/octonore/template_spec.rb:38:in `block (3 levels) in <top (required)>'
+
+Finished in 1.08 seconds
+6 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/lib/octonore/template_spec.rb:29 # Octonore::Template GET template must have a data method
+rspec ./spec/lib/octonore/template_spec.rb:37 # Octonore::Template GET template must perform the request and get the data
