@@ -15,19 +15,23 @@ describe Octonore::Templates do
     end
 
     it "should get a specified template by name" do
-      template = Octonore::Templates.get("C")
-      template.values_at("name", "source").should_not include(nil)
+      template = Octonore::Templates.get_name("C")
+      template.name.should_not be_nil
+      template.source.should_not be_nil
     end
 
     it "should get a specified template by index" do
       template = Octonore::Templates.get_index(3)
-      template.values_at("name", "source").should_not include(nil)
+      template.name.should_not be_nil
+      template.source.should_not be_nil
     end
 
     it "should get specified templates in an array" do
       templates = Octonore::Templates.get_array(["Java", "C"])
-      templates[0].values_at("name", "source").should_not include(nil)
-      templates[1].values_at("name", "source").should_not include(nil)
+      templates.each do |template|
+        template.name.should_not be_nil
+        template.source.should_not be_nil
+      end
     end
 
     it "should raise an error if template name doesn't exist" do
