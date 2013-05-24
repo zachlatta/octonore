@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'octonore'
-  s.version     = '0.0.3'
+  s.version     = File.read("VERSION").strip
   s.date        = '2013-05-23'
   s.summary     = 'Wrapper around the Github gitignore template API.'
   s.description = 'An octolicious wrapper around the Github gitignore template
