@@ -8,7 +8,7 @@ module Octonore
 
     include HTTParty
 
-    USER_AGENT = "octocore/#{VERSION}"
+    USER_AGENT = "octonore/#{VERSION}"
 
     base_uri 'https://api.github.com/gitignore'
 
