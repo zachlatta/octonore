@@ -48,7 +48,7 @@ describe Octonore::Template do
       template.should respond_to :update
     end
 
-    it "should get update data from Github" do
+    it "should be able to refresh data from Github" do
       template.source = nil
       template.update
       template.source.should_not equal nil
