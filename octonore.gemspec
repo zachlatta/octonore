@@ -11,8 +11,6 @@ Gem::Specification.new do |s|
   s.email    = 'zchlatta@gmail.com'
   s.homepage = 'http://rubygems.org/gems/octonore'
 
-  s.add_runtime_dependency 'httparty', '~> 0.11.0'
-
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables = `git ls-files -- bin/*`.split("\n").map { |f|
