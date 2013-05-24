@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Octonore by zachlatta</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Octonore</h1>
+        <p>An octolicious wrapper around Github's gitignore template API.</p>
+
+        <p class="view"><a href="https://github.com/zachlatta/octonore">View the Project on GitHub <small>zachlatta/octonore</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/zachlatta/octonore/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/zachlatta/octonore/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/zachlatta/octonore">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Install with the following:</p>
+
+<pre><code>$ gem install octonore
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>To get a gitignore template you first need to instantiate it.</p>
+
+<pre><code>&gt;&gt; c_template = Octonore::Template.new('C')
+=&gt; #&lt;Octonore::Template:0x007fe65b8b2420 @name="C", @source="# Object files\n*.
+o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Windows DLLs)\n*.dll\n*.
+so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"&gt;
+</code></pre>
+
+<p>To get the template's source code, you can call its <code>source</code> accessor.</p>
+
+<pre><code>&gt;&gt; c_template.source
+=&gt; "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Wi
+ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app
+\n"
+</code></pre>
+
+<p>You can also get the template's name with the <code>name</code> accessor.</p>
+
+<pre><code>&gt;&gt; c_template.name
+=&gt; "C"
+</code></pre>
+
+<p>You can reload the template's source from Github with the <code>update</code> method.</p>
+
+<pre><code>&gt;&gt; c_template.update
+=&gt; "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Wi
+ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app
+\n"
+</code></pre>
+
+<h3>Example Program</h3>
+
+<p>The following program asks the user for the name of a gitignore template. It then writes the gitignore to a file ending in <code>.gitignore</code>. If the user enters <code>Java</code>, then it will write the Java gitignore template to <code>java.gitignore</code> in the current directory.</p>
+
+<div class="highlight"><pre><span class="nb">require</span> <span class="s1">'octonore'</span>
+
+<span class="k">begin</span>
+  <span class="nb">print</span> <span class="s2">"Enter the name of a gitignore template (case sensitive): "</span>
+  <span class="n">template</span> <span class="o">=</span> <span class="ss">Octonore</span><span class="p">:</span><span class="ss">:Template</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span>
+
+  <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="n">template</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">downcase</span><span class="si">}</span><span class="s2">.gitignore"</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+          <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">source</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">rescue</span> <span class="no">GitignoreTemplateNotFoundError</span> <span class="o">=&gt;</span> <span class="n">e</span>
+  <span class="nb">puts</span> <span class="n">e</span><span class="o">.</span><span class="n">message</span>
+<span class="k">end</span>
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/zachlatta">zachlatta</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
