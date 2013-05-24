@@ -29,7 +29,12 @@ module Octonore
 
     def update
       data = get_data
-      @source = data["source"]
+      
+      if valid_template_hash? data
+        @source = data["source"]
+      else
+        raise GitignoreTemplateNotFoundError, "Invalid template name!"
+      end
     end
 
 
@@ -39,10 +44,17 @@ module Octonore
       self.class.get "/templates/#{self.name}", headers: headers 
     end
 
+    def valid_template_hash?(template_hash)
+      template_hash["message"] != "Not Found"
+    end
+
     def headers
       {"User-Agent" => USER_AGENT}
     end
 
+  end
+
+  class GitignoreTemplateNotFoundError < StandardError
   end
 
 end

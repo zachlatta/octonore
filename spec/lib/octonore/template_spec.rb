@@ -53,6 +53,11 @@ describe Octonore::Template do
       template.update
       template.source.should_not equal nil
     end
+
+    it "should raise an error if template doesn't exist" do
+      expect {
+        bad_template = Octonore::Template.new('invalid') }.to raise_error
+    end
     
   end
 
