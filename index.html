@@ -68,12 +68,12 @@ ables\n*.exe\n*.out\n*.app\n"
 
 <h3>Example Program</h3>
 
-<p>The following program asks the user for the name of a gitignore template. It then writes the gitignore to a file ending in <code>.gitignore</code>. If the user enters <code>Java</code>, then it will write the Java gitignore template to <code>java.gitignore</code> in the current directory.</p>
+<p>The following program asks the user for the name of a gitignore template. It then writes the gitignore to a file ending in <code>.gitignore</code>. If the user enters <code>Java</code>, then it will write the Java gitignore template to <code>java.gitignore</code> in the current directory. It's important to note that it is case sensitive.</p>
 
 <div class="highlight"><pre><span class="nb">require</span> <span class="s1">'octonore'</span>
 
 <span class="k">begin</span>
-  <span class="nb">print</span> <span class="s2">"Enter the name of a gitignore template (case sensitive): "</span>
+  <span class="nb">print</span> <span class="s2">"Enter the name of a gitignore template: "</span>
   <span class="n">template</span> <span class="o">=</span> <span class="ss">Octonore</span><span class="p">:</span><span class="ss">:Template</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span>
 
   <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="n">template</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">downcase</span><span class="si">}</span><span class="s2">.gitignore"</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
