@@ -19,9 +19,22 @@ module Octonore
     # Get a specified template by name.
     #
     # @param name (String) name of template to get, case sensitive
-    # @return [Template] template gotten
+    # @return [Template] template retrieved
     def self.get_name(name)
       Template.new(name)
+    end
+
+    # Get a specified template by index.
+    #
+    # @param index (FixNum) index of template to get in list
+    # @return [Template] template retrieved
+    def self.get_index(index)
+      if index > list.size
+        raise GitignoreTemplateNotFoundError
+      else
+        name = list[index]
+        get_name name
+      end
     end
     
 
