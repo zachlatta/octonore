@@ -33,7 +33,8 @@ module Octonore
       if valid_template_hash? data
         @source = data["source"]
       else
-        raise GitignoreTemplateNotFoundError, "Invalid template name!"
+        raise GitignoreTemplateNotFoundError,
+          "Template '#{@name}' does not exist!"
       end
     end
 
