@@ -38,17 +38,18 @@
 <p>To get a gitignore template you first need to instantiate it.</p>
 
 <pre><code>&gt;&gt; c_template = Octonore::Template.new('C')
-=&gt; #&lt;Octonore::Template:0x007fe65b8b2420 @name="C", @source="# Object files\n*.
-o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Windows DLLs)\n*.dll\n*.
-so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"&gt;
+=&gt; #&lt;Octonore::Template:0x007fe65b8b2420 @name="C", @source="# Objec
+t files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Wi
+ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*
+.out\n*.app\n"&gt;
 </code></pre>
 
 <p>To get the template's source code, you can call its <code>source</code> accessor.</p>
 
 <pre><code>&gt;&gt; c_template.source
-=&gt; "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Wi
-ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app
-\n"
+=&gt; "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objec
+ts (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executable
+s\n*.exe\n*.out\n*.app\n"
 </code></pre>
 
 <p>You can also get the template's name with the <code>name</code> accessor.</p>
@@ -60,9 +61,9 @@ ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app
 <p>You can reload the template's source from Github with the <code>update</code> method.</p>
 
 <pre><code>&gt;&gt; c_template.update
-=&gt; "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Wi
-ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app
-\n"
+=&gt; "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objec
+ts (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executable
+s\n*.exe\n*.out\n*.app\n"
 </code></pre>
 
 <h3>Example Program</h3>
