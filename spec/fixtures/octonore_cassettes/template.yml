@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - octocore/0.11.0
+      - octonore/0.11.0
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Fri, 24 May 2013 01:15:28 GMT
+      - Fri, 24 May 2013 17:30:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -27,7 +27,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '49'
+      - '53'
       X-Github-Media-Type:
       - github.beta; format=json
       X-Content-Type-Options:
@@ -51,7 +51,7 @@ http_interactions:
       string: '{"name":"C","source":"# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n#
         Shared objects (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"}'
     http_version: 
-  recorded_at: Fri, 24 May 2013 01:15:29 GMT
+  recorded_at: Fri, 24 May 2013 17:30:36 GMT
 - request:
     method: get
     uri: https://api.github.com/gitignore/templates/C
@@ -60,7 +60,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - octocore/0.11.0
+      - octonore/0.11.0
   response:
     status:
       code: 200
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Fri, 24 May 2013 01:15:29 GMT
+      - Fri, 24 May 2013 17:30:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -79,7 +79,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '48'
+      - '52'
       X-Github-Media-Type:
       - github.beta; format=json
       X-Content-Type-Options:
@@ -103,7 +103,7 @@ http_interactions:
       string: '{"name":"C","source":"# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n#
         Shared objects (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"}'
     http_version: 
-  recorded_at: Fri, 24 May 2013 01:15:29 GMT
+  recorded_at: Fri, 24 May 2013 17:30:36 GMT
 - request:
     method: get
     uri: https://api.github.com/gitignore/templates/invalid
@@ -112,7 +112,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - octocore/0.11.0
+      - octonore/0.11.0
   response:
     status:
       code: 404
@@ -121,7 +121,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Fri, 24 May 2013 01:15:29 GMT
+      - Fri, 24 May 2013 17:30:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -131,7 +131,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '47'
+      - '51'
       X-Github-Media-Type:
       - github.beta; format=json
       X-Content-Type-Options:
@@ -148,5 +148,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"Not Found"}'
     http_version: 
-  recorded_at: Fri, 24 May 2013 01:15:29 GMT
+  recorded_at: Fri, 24 May 2013 17:30:37 GMT
 recorded_with: VCR 2.5.0

@@ -1,0 +1,48 @@
+[Coveralls] Set up the SimpleCov formatter.
+[Coveralls] Using SimpleCov's default settings.
+"octonore/0.11.0"
+........{}
+FFFFF{}
+.
+
+Failures:
+
+  1) Octonore::Templates GET template should list gitignore templates
+     Failure/Error: templates.should be_an_instance_of Array
+       expected #<HTTParty::Response:0x7faa49fe0f10 parsed_response="{\"message\":\"Missing or invalid User Agent string. See http://developer.github.com/v3/#user-agent-required\"}", @response=#<Net::HTTPForbidden 403 Forbidden readbody=true>, @headers={"server"=>["GitHub.com"], "date"=>["Fri, 24 May 2013 17:26:47 GMT"], "content-type"=>["application/octet-stream"], "content-length"=>["107"], "connection"=>["keep-alive"]}> to be an instance of Array
+     # ./spec/lib/octonore/templates_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+  2) Octonore::Templates GET template should get a specified template by name
+     Failure/Error: template.values_at("name", "source").should_not include(nil)
+     NoMethodError:
+       undefined method `values_at' for #<HTTParty::Response:0x007faa4b06bb28>
+     # ./spec/lib/octonore/templates_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+  3) Octonore::Templates GET template should get a specified template by index
+     Failure/Error: template = Octonore::Templates.get_index(3)
+     NoMethodError:
+       undefined method `get_index' for Octonore::Templates:Class
+     # ./spec/lib/octonore/templates_spec.rb:23:in `block (3 levels) in <top (required)>'
+
+  4) Octonore::Templates GET template should get specified templates in an array
+     Failure/Error: templates = Octonore::Templates.get_array(["Java", "C"])
+     NoMethodError:
+       undefined method `get_array' for Octonore::Templates:Class
+     # ./spec/lib/octonore/templates_spec.rb:28:in `block (3 levels) in <top (required)>'
+
+  5) Octonore::Templates GET template should raise an error if template name doesn't exist
+     Failure/Error: expect {
+       expected Exception but nothing was raised
+     # ./spec/lib/octonore/templates_spec.rb:34:in `block (3 levels) in <top (required)>'
+
+Finished in 0.12155 seconds
+14 examples, 5 failures
+
+Failed examples:
+
+rspec ./spec/lib/octonore/templates_spec.rb:11 # Octonore::Templates GET template should list gitignore templates
+rspec ./spec/lib/octonore/templates_spec.rb:17 # Octonore::Templates GET template should get a specified template by name
+rspec ./spec/lib/octonore/templates_spec.rb:22 # Octonore::Templates GET template should get a specified template by index
+rspec ./spec/lib/octonore/templates_spec.rb:27 # Octonore::Templates GET template should get specified templates in an array
+rspec ./spec/lib/octonore/templates_spec.rb:33 # Octonore::Templates GET template should raise an error if template name doesn't exist
+[Coveralls] Outside the Travis environment, not sending data.
