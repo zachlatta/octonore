@@ -12,23 +12,45 @@ Usage
 To get a gitignore template you first need to instantiate it.
 
 	>> c_template = Octonore::Template.new('C')
-    => #<Octonore::Template:0x007fe5f401a1d0 @name="C">
+    => #<Octonore::Template:0x007fe65b8b2420 @name="C", @source="# Object files\n*.
+    o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Windows DLLs)\n*.dll\n*.
+    so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n">
 
-To get a hash of its name and source code, call its `data` method.
+To get the template's source code, you can call its `source` accessor.
 
-	>> c_template.data
-	=> #<HTTParty::Response:0x7fe5f50adad8 parsed_response={"name"=>"C", "source"=>"# Object fi…
+	>> c_template.source
+	=> "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Wi
+    ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app
+    \n"
+
+
+You can also get the template's name with the `name` accessor.
+
+    >> c_template.name
+    => "C"
+
+You can reload the template's source from Github with the `update` method.
+
+    >> c_template.update
+	=> "# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n# Shared objects (inc. Wi
+    ndows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app
+    \n"
+
 
 ### Example Program
+
+The following program asks the user for the name of a gitignore template. It then writes the gitignore to a file ending in `.gitignore`. If the user enters `Java`, then it will write the Java gitignore template to `java.gitignore` in the current directory.
 
 ```ruby
 require 'octonore'
 
-templates = [ Octonore::Template.new('C'), Octonore::Template.new('Java') ]
-
-templates.each do |template|
-  File.open("#{template.data["name"]}.gitignore", 'w') { |file|
-    file.write(template.data["source"])
-  }
+begin
+  print "Enter the name of a gitignore template (case sensitive): "
+  template = Octonore::Template.new(gets.strip)
+  
+  File.open("#{template.name.downcase}.gitignore", 'w') { |file|
+          file.write(template.source) }
+rescue GitignoreTemplateNotFoundError => e
+  puts e.message
 end
 ```
