@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'httparty'
+gem 'httparty', '~> 0.11.0'
 
 group :test do
   gem 'rspec'
