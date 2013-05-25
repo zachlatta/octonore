@@ -36,7 +36,8 @@ describe Octonore::Templates do
 
     it "should raise an error if template name doesn't exist" do
       expect {
-        bad_template = Octonore::Templates.get('invalid') }.to raise_error
+        bad_template = Octonore::Templates.get_name('invalid')
+      }.to raise_error
     end
 
     it "should raise an error if template index doesn't exist" do

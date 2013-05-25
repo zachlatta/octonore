@@ -350,4 +350,55 @@ http_interactions:
       string: '{"message":"Not Found"}'
     http_version: 
   recorded_at: Fri, 24 May 2013 17:47:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/gitignore/templates/Java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - octonore/0.11.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 25 May 2013 04:41:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '59'
+      X-Github-Media-Type:
+      - github.beta; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '78'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+      Etag:
+      - '"881d51421dd39c30283451c1efa37124"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"name":"Java","source":"*.class\n\n# Package Files #\n*.jar\n*.war\n*.ear\n"}'
+    http_version: 
+  recorded_at: Sat, 25 May 2013 04:41:58 GMT
 recorded_with: VCR 2.5.0
