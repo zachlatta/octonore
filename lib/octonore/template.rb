@@ -30,7 +30,6 @@ module Octonore
     #   => "# Object files\n*.o\n\n# Libraries\n*.lib..."
     def update
       data = get_template_hash @name
-      p @name
       
       if valid_template_hash? data
         @source = data["source"]
