@@ -46,6 +46,12 @@ describe Octonore::Template do
       expect {
         bad_template = Octonore::Template.new('invalid') }.to raise_error
     end
+
+    it "should list gitignore templates" do
+      templates = Octonore::Template.list      
+      templates.should be_an_instance_of Array
+      templates.should include("C")
+    end
     
   end
 

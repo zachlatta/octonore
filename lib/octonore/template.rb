@@ -39,6 +39,14 @@ module Octonore
       end
     end
 
+    # List available templates
+    #
+    # Example:
+    #   >> Octonore::Template.list
+    def self.list
+      Octonore::HTTPHelper.instance.get("/templates")
+    end
+
 
     private
 
