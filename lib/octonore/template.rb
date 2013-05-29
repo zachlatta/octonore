@@ -31,7 +31,6 @@ module Octonore
     def update
       data = get_template_hash @name
       p @name
-      p data
       
       if valid_template_hash? data
         @source = data["source"]
