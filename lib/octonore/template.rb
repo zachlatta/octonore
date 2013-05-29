@@ -6,13 +6,6 @@ module Octonore
 
     attr_accessor :name, :source
 
-    include HTTParty
-
-    USER_AGENT = "octonore/#{VERSION}"
-    p USER_AGENT
-
-    base_uri 'https://api.github.com/gitignore'
-
     # Create a new template.
     #
     # Example:
@@ -37,6 +30,8 @@ module Octonore
     #   => "# Object files\n*.o\n\n# Libraries\n*.lib..."
     def update
       data = get_template_hash @name
+      p @name
+      p data
       
       if valid_template_hash? data
         @source = data["source"]
@@ -53,15 +48,11 @@ module Octonore
     # @param name [String] name of template to get
     # @return [Hash] hash containing template info
     def get_template_hash(name)
-      self.class.get "/templates/#{name}", headers: headers 
+      Octonore::HTTPHelper.instance.get("/templates/#{name}")
     end
 
     def valid_template_hash?(template_hash)
       template_hash["message"] != "Not Found"
-    end
-
-    def headers
-      {"User-Agent" => USER_AGENT}
     end
 
   end

@@ -2,18 +2,6 @@ require_relative '../../spec_helper'
 
 describe Octonore::Template do
 
-  describe "default attributes" do
-
-    it "should have httparty methods" do
-      Octonore::Template.should include(HTTParty)
-    end
-
-    it "should have the base url set to the Github API gitignore endpoint" do
-      Octonore::Template.base_uri.should eq('https://api.github.com/gitignore')
-    end
-
-  end
-
   describe "default instance attributes" do
 
     let(:template) { Octonore::Template.new('C') }
