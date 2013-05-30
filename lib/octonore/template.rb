@@ -63,7 +63,4 @@ module Octonore
 
   end
 
-  class GitignoreTemplateNotFoundError < StandardError
-  end
-
 end
