@@ -21,13 +21,23 @@ module Octonore
     #
     # Example:
     #   c_template = Octonore::Template.new('C')
-    #   java_template = Octonore::Template.new('Java')
+    #   java_template = Octonore::Template.new('java')
     #
-    # @param name [String] name of template to create,
-    #                      case sensitive
+    # @param name [String] name of template to create
     # @return [String] Contents of template.
     def initialize(name)
-      self.name = name
+      # Get two arrays of all of the names of templates available. Downcase
+      # one.
+      list = self.class.list
+      down_list = list.map(&:downcase)
+      # Create a hash from the lowercase names to the normal names so we can
+      # make the user-specified name case-insensitive.
+      list_hash = Hash[down_list.zip(list)]
+
+      # Downcase the the user's name selection and get the matching normal
+      # name in the list_hash
+      self.name = list_hash[name.downcase]
+      # Retrieve the information from Github for their template
       reload
     end
 

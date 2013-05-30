@@ -22,6 +22,11 @@ describe Octonore::Template do
       template.name.should eq('C')
     end
 
+    it "should not have case sensitive names" do
+      valid_template = Octonore::Template.new('java')
+      valid_template.name.should eq('Java')
+    end
+
   end
 
   describe "GET template" do

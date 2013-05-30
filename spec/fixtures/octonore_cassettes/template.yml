@@ -2,110 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/gitignore/templates/C
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - octonore/0.11.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Wed, 29 May 2013 18:20:32 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '60'
-      X-Ratelimit-Remaining:
-      - '42'
-      X-Github-Media-Type:
-      - github.beta; format=json
-      X-Content-Type-Options:
-      - nosniff
-      Content-Length:
-      - '180'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
-      Access-Control-Allow-Origin:
-      - '*'
-      Etag:
-      - '"547a43504d718cb7bc42ed51aae7f643"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Vary:
-      - Accept-Encoding
-    body:
-      encoding: UTF-8
-      string: '{"name":"C","source":"# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n#
-        Shared objects (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"}'
-    http_version: 
-  recorded_at: Wed, 29 May 2013 18:20:33 GMT
-- request:
-    method: get
-    uri: https://api.github.com/gitignore/templates/C
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - octonore/0.11.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Wed, 29 May 2013 18:20:32 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '60'
-      X-Ratelimit-Remaining:
-      - '41'
-      X-Github-Media-Type:
-      - github.beta; format=json
-      X-Content-Type-Options:
-      - nosniff
-      Content-Length:
-      - '180'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
-      Access-Control-Allow-Origin:
-      - '*'
-      Etag:
-      - '"547a43504d718cb7bc42ed51aae7f643"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Vary:
-      - Accept-Encoding
-    body:
-      encoding: UTF-8
-      string: '{"name":"C","source":"# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n#
-        Shared objects (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"}'
-    http_version: 
-  recorded_at: Wed, 29 May 2013 18:20:33 GMT
-- request:
-    method: get
     uri: https://api.github.com/gitignore/templates
     body:
       encoding: US-ASCII
@@ -121,7 +17,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 29 May 2013 18:20:33 GMT
+      - Thu, 30 May 2013 11:58:28 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -131,7 +27,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '40'
+      - '56'
       X-Github-Media-Type:
       - github.beta; format=json
       X-Content-Type-Options:
@@ -154,10 +50,165 @@ http_interactions:
       encoding: UTF-8
       string: '["Actionscript","Android","AppceleratorTitanium","Autotools","Bancha","C","C++","CFWheels","CMake","CSharp","CakePHP","Clojure","CodeIgniter","Compass","Concrete5","Coq","Delphi","Django","Drupal","Erlang","ExpressionEngine","Finale","ForceDotCom","FuelPHP","GWT","Go","Grails","Haskell","Java","Jboss","Jekyll","Joomla","Jython","Kohana","LaTeX","Leiningen","LemonStand","Lilypond","Lithium","Magento","Maven","Node","OCaml","Objective-C","Opa","OracleForms","Perl","PlayFramework","Python","Qooxdoo","Qt","R","Rails","RhodesRhomobile","Ruby","Scala","Sdcc","SeamGen","SketchUp","SugarCRM","Symfony","Symfony2","SymphonyCMS","Target3001","Tasm","Textpattern","TurboGears2","Unity","VB.Net","Waf","WordPress","Yii","ZendFramework","gcov","nanoc","opencart"]'
     http_version: 
-  recorded_at: Wed, 29 May 2013 18:20:33 GMT
+  recorded_at: Thu, 30 May 2013 11:58:28 GMT
 - request:
     method: get
-    uri: https://api.github.com/gitignore/templates/invalid
+    uri: https://api.github.com/gitignore/templates/C
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - octonore/0.11.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 30 May 2013 11:58:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '55'
+      X-Github-Media-Type:
+      - github.beta; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '180'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+      Etag:
+      - '"547a43504d718cb7bc42ed51aae7f643"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"name":"C","source":"# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n#
+        Shared objects (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"}'
+    http_version: 
+  recorded_at: Thu, 30 May 2013 11:58:29 GMT
+- request:
+    method: get
+    uri: https://api.github.com/gitignore/templates/Java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - octonore/0.11.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 30 May 2013 11:58:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '54'
+      X-Github-Media-Type:
+      - github.beta; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '78'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+      Etag:
+      - '"881d51421dd39c30283451c1efa37124"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"name":"Java","source":"*.class\n\n# Package Files #\n*.jar\n*.war\n*.ear\n"}'
+    http_version: 
+  recorded_at: Thu, 30 May 2013 11:58:29 GMT
+- request:
+    method: get
+    uri: https://api.github.com/gitignore/templates/C
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - octonore/0.11.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 30 May 2013 11:58:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '53'
+      X-Github-Media-Type:
+      - github.beta; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '180'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+      Etag:
+      - '"547a43504d718cb7bc42ed51aae7f643"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"name":"C","source":"# Object files\n*.o\n\n# Libraries\n*.lib\n*.a\n\n#
+        Shared objects (inc. Windows DLLs)\n*.dll\n*.so\n*.so.*\n*.dylib\n\n# Executables\n*.exe\n*.out\n*.app\n"}'
+    http_version: 
+  recorded_at: Thu, 30 May 2013 11:58:29 GMT
+- request:
+    method: get
+    uri: https://api.github.com/gitignore/templates/
     body:
       encoding: US-ASCII
       string: ''
@@ -172,7 +223,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 29 May 2013 18:20:33 GMT
+      - Thu, 30 May 2013 11:58:29 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -182,7 +233,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '39'
+      - '52'
       X-Github-Media-Type:
       - github.beta; format=json
       X-Content-Type-Options:
@@ -199,5 +250,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"Not Found"}'
     http_version: 
-  recorded_at: Wed, 29 May 2013 18:20:34 GMT
+  recorded_at: Thu, 30 May 2013 11:58:30 GMT
 recorded_with: VCR 2.5.0
