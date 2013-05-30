@@ -9,3 +9,5 @@ group :development, :test do
   gem "rake",      "~> 10.0.4"
   gem "coveralls", "~> 0.6.7", require: false
 end
+
+gemspec
