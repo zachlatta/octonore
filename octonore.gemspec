@@ -3,6 +3,18 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'octonore/version'
 
 Gem::Specification.new do |s|
+  s.authors  = ['Zach Latta']
+  s.email    = 'zchlatta@gmail.com'
+  s.homepage = 'http://rubygems.org/gems/octonore'
+
+  s.name        = 'octonore'
+  s.version     = Octonore::VERSION
+  s.date        = '2013-05-30'
+  s.summary     = 'An octolicious wrapper around the Gitignore Templates
+                   API.'
+  s.description = s.summary
+
+  s.license     = 'MIT'
   s.add_development_dependency 'bundler', '~> 1.0'
   s.add_dependency 'httparty', '~> 0.11.0'
 
@@ -12,16 +24,4 @@ Gem::Specification.new do |s|
                       File.basename(f)
                   }
   s.require_paths = ['lib']
-
-  s.authors  = ['Zach Latta']
-  s.email    = 'zchlatta@gmail.com'
-  s.homepage = 'http://rubygems.org/gems/octonore'
-
-  s.name        = 'octonore'
-  s.version     = Octonore::VERSION
-  s.date        = '2013-05-30'
-  s.summary     = 'An octolicious wrapper around the Github gitignore template
-                   API.'
-  s.description = s.summary
-  s.license     = 'MIT'
 end
