@@ -1,13 +1,19 @@
 Octonore [![Build Status](https://travis-ci.org/zachlatta/octonore.png?branch=master)](https://travis-ci.org/zachlatta/octonore) [![Code Climate](https://codeclimate.com/github/zachlatta/octonore.png)](https://codeclimate.com/github/zachlatta/octonore) [![Coverage Status](https://coveralls.io/repos/zachlatta/octonore/badge.png?branch=master)](https://coveralls.io/r/zachlatta/octonore?branch=master) [![Dependency Status](https://gemnasium.com/zachlatta/octonore.png)](https://gemnasium.com/zachlatta/octonore)
 ========
 
-An octolicious wrapper around the [Gitignore templates API](http://developer.github.com/v3/gitignore/).
+An octolicious wrapper around the [Gitignore Templates API](http://developer.github.com/v3/gitignore/).
 
 	$ gem install octonore
 
 
 Usage
 -----
+
+List the available templates by calling `Template`'s list method.
+
+    >> Octonore::Template.list
+    => ["Actionscript", "Android", "AppceleratorTitanium", "Autotools", "Bancha", "
+    C", "C++", "CFWheels", "CMake", "CSharp", "CakePHP", "Clojure", "CodeIgniter...
 
 To get a gitignore template you first need to instantiate it.
 
