@@ -16,19 +16,19 @@ module Octonore
     #                      case sensitive
     def initialize(name)
       self.name = name
-      update
+      reload
     end
 
-    # Update the Gitignore source from Github.
+    # Reload the Gitignore source from Github.
     #
     # Example:
     #   >> outdated_template.source = nil
     #   => nil
-    #   >> outdated_template.update
+    #   >> outdated_template.reload
     #   => "# Object files\n*.o\n\n# Libraries\n*.lib..."
     #   >> outdated_template.source
     #   => "# Object files\n*.o\n\n# Libraries\n*.lib..."
-    def update
+    def reload
       data = get_template_hash @name
       
       if valid_template_hash? data

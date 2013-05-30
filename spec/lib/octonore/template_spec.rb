@@ -32,13 +32,13 @@ describe Octonore::Template do
 
     after { VCR.eject_cassette }
 
-    it "should have an update method" do
-      template.should respond_to :update
+    it "should have a reload method" do
+      template.should respond_to :reload
     end
 
-    it "should be able to refresh data from Github" do
+    it "should reload data from Github" do
       template.source = nil
-      template.update
+      template.reload
       template.source.should_not equal nil
     end
 
